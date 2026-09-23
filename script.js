@@ -1,4 +1,4 @@
-const DEFAULT_PIN = "ALBASHAR123456789"; 
+const DEFAULT_PIN = "ALBASHAR12345678"; 
 
 const lockScreen = document.getElementById('lockScreen');
 const appContainer = document.getElementById('appContainer');
