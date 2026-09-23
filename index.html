@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protected File Vault</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Lock Screen Overlay -->
+  <div id="lockScreen" class="lock-screen">
+    <div class="lock-card">
+      <i class="fa-solid fa-user-lock lock-icon"></i>
+      <h2>File Vault Locked</h2>
+      <p>Enter Password to Unlock</p>
+      <input type="password" id="pinInput" placeholder="Enter Password">
+      <button id="unlockBtn">Unlock Vault</button>
+      <div id="errorMsg" class="error-msg"></div>
+    </div>
+  </div>
+
+  <!-- Main App (Hidden initially) -->
+  <div id="appContainer" class="app-container hidden">
+    <header>
+      <div class="header-top">
+        <h1><i class="fa-solid fa-box-archive"></i> File Vault</h1>
+        <button id="lockBtn" class="lock-app-btn" title="Lock Vault"><i class="fa-solid fa-lock"></i> Lock</button>
+      </div>
+      <p>Store & Protect Your Essential Files</p>
+    </header>
+
+    <!-- Upload Area -->
+    <section class="upload-section">
+      <input type="file" id="fileInput" multiple hidden>
+      <label for="fileInput" class="drop-zone">
+        <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+        <span>Click or Drag & Drop Files Here</span>
+        <small>(Images, Documents, Audio, Video, etc.)</small>
+      </label>
+    </section>
+
+    <!-- Storage Counter -->
+    <div class="storage-info">
+      <span>Total Files: <strong id="fileCount">0</strong></span>
+    </div>
+
+    <!-- Vault Files List -->
+    <section class="vault-section">
+      <h2><i class="fa-solid fa-shield-halved"></i> Vault Contents</h2>
+      <div id="fileList" class="file-grid">
+        <!-- Uploaded files will be displayed here -->
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
